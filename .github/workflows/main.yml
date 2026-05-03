@@ -41,13 +41,6 @@ jobs:
       - name: Install deployement package
         working-directory: deployment-package
         run: npm ci --omit=dev
-
-      - name: Az CLI login with subscription OIDC
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENTID }}
-          tenant-id: ${{ secrets.AZURE_TENANTID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
           
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
