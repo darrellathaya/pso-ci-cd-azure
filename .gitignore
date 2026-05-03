@@ -37,3 +37,4 @@ next-env.d.ts
 
 # Azure Web App Profile
 *.PublishSettings
+*.zip
