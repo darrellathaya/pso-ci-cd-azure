@@ -28,7 +28,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          MONGODB_URL: ${{ secrets.AZURE_COSMOS_MONGODB_URL }}
+          MONGODB_URL: ${{ secrets.AZURE_COSMOS_CONNECTIONSTRING }}
 
       - name: Create deployment package
         run: |
